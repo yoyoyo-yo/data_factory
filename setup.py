@@ -4,5 +4,4 @@ setup(
     name='data_factory',
     packages=['data_factory'],
     version='0.1',
-    packages=find_packages()
 )
