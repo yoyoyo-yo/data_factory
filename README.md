@@ -131,6 +131,10 @@ df = dfac.get_data()
 
 Gaussian noise.
 
+```python
+['gauss_test', 'num', dict(type='gauss', mean=25, std=5)],
+```
+
 - mean : float ... Mean value of gaussian distribution.
 - std : float ... Standard deviation of gaussian distribution.
 
@@ -138,13 +142,28 @@ Gaussian noise.
 
 Order value.
 
+```python
+['order_test', 'num', dict(type='order', freq=1, start=1)],
+```
+
+- freq : int ... Frequency.
+- start : int ... Start value.
+
 ### sin, cos
 
 f = sin(2 * pi * frequency * ind / data_length)
 
+```python
+['sin_test', 'num', dict(type='sin', freq=3)],
+```
+
 - freq : float ... Frequency.
 
 ### uniform
+
+```python
+['uniform_test', 'num', dict(type='uniform', val=2)],
+```
 
 - value : float ... Constant value.
 
@@ -152,12 +171,24 @@ f = sin(2 * pi * frequency * ind / data_length)
 
 f = exp(x), f = exp(-x)
 
+```python
+['exp_test', 'num', dict(type='exp')],
+```
+
 ### noise
+
+```python
+['noise_test', 'expr', dict(expr=[dict(type='uniform', val=2), '+', dict(type='noise', noise_type='gauss', prob=0.2, scale=10)])],
+```
 
 - noise_type : str (default='gauss') ... Noise type. ['gauss', 'const']
 - prob : float (defualt=0.5) ... Noise frequency.
 
 ### corr
+
+```python
+['corr_test', 'num', dict(type='corr', anchor='exp_test', corr=0.8)],
+```
 
 - anchor : str ... Anchor column name.
 - corr : float (default=0.5) ... Target correlation value.
