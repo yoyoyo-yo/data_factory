@@ -4,6 +4,10 @@ Generate your own data.
 
 # Install
 
+```bash
+$ pip install git+https://github.com/yoyoyo-yo/data_factory.git
+```
+
 # Easy Usage
 
 ## Generate random data
