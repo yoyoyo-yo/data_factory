@@ -8,6 +8,12 @@ Generate your own data.
 $ pip install git+https://github.com/yoyoyo-yo/data_factory.git
 ```
 
+# Requirments
+
+```bash
+numpy, pandas
+```
+
 # Easy Usage
 
 ## Generate random data
@@ -279,3 +285,8 @@ df = dfac.get_data()
 ### Args
 
 - return_dtype : str (default='pd') ... Data type.
+
+
+# License
+
+MIT License
